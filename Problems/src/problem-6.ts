@@ -7,11 +7,13 @@ interface Profile{
     age:number;
     email:string;
 }
-function updateProfile(obj:Profile,upd:object):object{
-    return {}
+function updateProfile(obj:Profile,upd:Partial<Profile>){
+    return {...obj,...upd}
 }
 
+const myProfile = { name: "Alice", age: 25, email: "alice@example.com" };
 
+// console.log(updateProfile(myProfile, { email: "alice@gmail.com",name:"rayhan" }));
 
 
 
