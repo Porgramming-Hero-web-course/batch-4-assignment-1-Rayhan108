@@ -23,7 +23,7 @@ function calculateShapeArea(shape:Shape):number{
        const area= parseFloat((shape.width*shape.height).toFixed(2));
        return area;
     }
-  
+  throw new Error("shape must be circle or rectangle");
 }
 const circleArea = calculateShapeArea({ shape: "circle", radius: 5 })
 
